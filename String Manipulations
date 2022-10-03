@@ -1,0 +1,23 @@
+string = "QWERTY"
+print(string)
+print(string[0:3])
+  # prints the first 3 characters in string (first character counts as 0, doesnt print 3)
+print(string[1:4])
+  #same thing but second character to the fourth (doesnt print fifth)
+print(string[3::])
+  # prints all the characters from the fourth position till the end (good if u dk how long the string is)
+print(string[::4])
+  # this doesnt do the same thing backwards! But why?
+  # print(string[*start point* : *end point* : *intervals*])
+  # : : 4 --> start at start, end at end, print characters at intervals of four
+  # 3 : : --> start at 3, end at end, print characters at intervals of 0 (thus every character)
+print(string[0:6:2])
+  # 0:6:2 --> start at 0, end at 6, intervals of 2
+print(string[-1])
+  # IMPORTANT -ve numbers count backwards. Thus 'Y' is the -1 value (not 0 as there is no -ve 0) 
+print(string[-6:-1])
+  # this doesnt print the full string as its IN BETWEEN -6 and -1. Similarly, 0:5 would not print the full string. Instead you can write 0:6, but there is no substitue for -ves so just use -6:: 
+print(string[-6::])
+  # ayy
+print(string[-1:-7:-1]) 
+  # this prints it backwards. It starts at -1 (last) and goes until -7 (thus includes -6 the first character) at intervals of NEGATIVE 1 (thus going backwards)
