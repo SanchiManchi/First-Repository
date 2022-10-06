@@ -1,0 +1,15 @@
+print("\nTable of numbers :)")
+for i in range(5):
+  print(f"{triangle[i]:^15} {fibonacci[i]:^15} {pi[i]:^15}")
+
+binary = input("Please input 8 digit binary number")
+while len(binary) != 8:
+  binary = input("Please input a valid 8 digit binary number")
+
+count = 0
+while count != 8:
+  count = 0
+for i in range(8):
+  if binary[i] in [0,1]:
+    count += 1
+
