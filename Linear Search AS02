@@ -1,0 +1,7 @@
+MyArray = ['2','6','4','9','1','12','hi','0','3','8']
+
+item = input("What item are you searching for?")
+for i in range(len(MyArray)):
+  if MyArray[i] == item:
+    print('item found at',i+1,'position')
+    break
