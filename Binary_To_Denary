@@ -1,0 +1,27 @@
+multiply = [128,64,32,16,8,4,2,1]
+total = 0 
+
+binary = input("Please input 8 digit binary number")
+while len(binary) != 8:
+  binary = input("Please input a valid 8 digit binary number")
+
+count = 0
+
+for i in range(8):
+  if binary[i] in ['0','1']:
+    count += 1
+
+while count != 8:
+  count = 0
+  binary = input("Please input a valid 8 digit binary number")
+  while len(binary) != 8:
+    binary = input("Please input a valid 8 digit binary number")
+  for i in range(8):
+    if binary[i] in ['0','1']:
+      count += 1
+
+for i in range (8):
+  add = int(binary[i])*multiply[i]
+  total = total + add
+
+print(binary, 'is equal to', total, 'in denary')
