@@ -1,0 +1,28 @@
+import random
+
+band = ['a','b','c','d','e','f','g','h','i','j']
+
+allsong = [[0 for j in range(10)] for i in range(10)]
+
+playlist = []
+
+for c in range (0,10):
+  for r in range (0,10):
+    entry = band[c] + str(r)
+    allsong[c][r] = entry
+  
+
+print("Queue:")
+
+for play in range(20):
+  current = allsong[random.randint(0, 9)][random.randint(0, 9)] 
+  playlist.append(current)
+  var = playlist[play-1]
+  while current[0] == var[0]:
+    current = allsong[random.randint(0, 9)][random.randint(0, 9)] 
+    playlist[play] = current
+  if play >= 2:
+    var2 = playlist[play-2]
+    while current[0] == var2[0]:
+      current = allsong[random.randint(0, 9)][random.randint(0, 9)] 
+  print(play+1,'.',playlist[play])
