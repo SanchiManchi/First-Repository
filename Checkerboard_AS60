@@ -1,0 +1,20 @@
+row = input('how many rows will your checkerboard have?')
+cols = input('how many coloumns will your checkerboard have?')
+
+board = [[0 for i in range(int(cols))] for i in range(int(row))]
+
+inp = 2
+
+for c in range(int(row)):
+  if int(cols)%2 == 0:
+    inp = inp + 1
+  for r in range(int(cols)):
+    if inp%2 == 0:
+      put = '.'
+    else:
+      put = '*'
+    board[c][r] = put
+    inp = inp + 1
+
+for i in range(int(row)):
+  print(*board[i])
